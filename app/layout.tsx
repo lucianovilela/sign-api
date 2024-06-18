@@ -16,7 +16,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav className="bg-gradient-to-r from-blue-300 to-blue-500 text-blue-800 p-4 dark:from-blue-700 dark:to-blue-900 dark:text-white">
+          <div className="container mx-auto flex justify-between items-center">
+            <h1 className="text-2xl font-bold">Zodiac Sign Search</h1>
+            <ul className="flex space-x-4">
+              <li><a href="#" className="hover:underline">Home</a></li>
+              <li><a href="#" className="hover:underline">About</a></li>
+              <li><a href="#" className="hover:underline">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        {children}
+        <footer className="bg-gradient-to-r from-blue-300 to-blue-500 text-blue-800 p-4 mt-8 dark:from-blue-700 dark:to-blue-900 dark:text-white">
+          <div className="container mx-auto text-center">
+            <p>&copy; 2023 Zodiac Sign Search</p>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
