@@ -149,10 +149,9 @@ const consultaWiki = async (nome) => {
       let url= page.url();
 
       return {
-        info:{ name:info.fullName || info.name || info.birthName || info.fullname, 
-              birthDate:info.birthDate, 
-              age:info.age 
-            },
+        name:info.fullName || info.name || info.birthName || info.fullname, 
+        birthDate:info.birthDate, 
+        age:info.age,
         caption:info.caption, 
         image,
         url
@@ -169,8 +168,8 @@ export const pesquisa = async (_nome) => {
 
   try {
     var signo = undefined;
-    if (resp.info?.birthDate?.date) {
-      signo = getSigno(new Date(resp.info?.birthDate?.date));
+    if (resp.birthDate?.date) {
+      signo = getSigno(new Date(resp.birthDate?.date));
     }
     return { ...resp, signo };
   } catch (error) {

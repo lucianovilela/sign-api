@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter} from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"],
+ });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,9 +29,9 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
-        <footer className="bg-gradient-to-r from-blue-300 to-blue-500 text-blue-800 p-4 mt-8 dark:from-blue-700 dark:to-blue-900 dark:text-white">
+        <footer className="fixed inset-x-0 bottom-0 bg-gradient-to-r from-blue-300 to-blue-500 text-blue-800 p-4 mt-8 dark:from-blue-700 dark:to-blue-900 dark:text-white">
           <div className="container mx-auto text-center">
-            <p>&copy; 2023 Zodiac Sign Search</p>
+            <p>&copy; 2024 Zodiac Sign Search</p>
           </div>
         </footer>
       </body>
